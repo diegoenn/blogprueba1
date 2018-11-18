@@ -1,3 +1,21 @@
-<h1>
-primera pagina de Diego Narvaez
-</h1>
+<h1>primera pagina de Diego Narvaez </h1>
+<h1>Listando Usuarios </h1>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>Email</td>
+  </tr>
+
+  <% @usuarios.each do |usuario| %>
+    <tr>
+      <td><%= link_to usuario.nombre, usuario %></td>
+      <td><% usuario.email %></td>
+      <td><% link_to "Editar", edit_user_path(usuario) %></td>
+      <td><% link_to "Eliminar", usuario, method: :delete, confirm: "Estas Seguro" %></td>
+    </tr>
+  <% end %>
+
+  <% if @usuarios.size==0 %>
+  Usuarios No Encontrados
+  <% end %>
+</table>
