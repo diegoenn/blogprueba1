@@ -14,7 +14,7 @@ class UsuariosController < ApplicationController
 
   def destroy
       Usuario.find(params[:id]).destroy
-      redirect_to_users_url
+      redirect_to usuarios_url
     end
 
   end

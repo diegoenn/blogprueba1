@@ -14,8 +14,10 @@
       <td><% link_to "Eliminar", usuario, method: :delete, confirm: "Estas Seguro" %></td>
     </tr>
   <% end %>
-
   <% if @usuarios.size==0 %>
-  Usuarios No Encontrados
+    <tr>
+    <td>Usuarios No Encontrados</td>
+    <td>Usuarios No Encontrados</td>
+  </tr>
   <% end %>
 </table>
