@@ -9,15 +9,15 @@
   <% @usuarios.each do |usuario| %>
     <tr>
       <td><%= link_to usuario.nombre, usuario %></td>
-      <td><% usuario.email %></td>
-      <td><% link_to "Editar", edit_user_path(usuario) %></td>
-      <td><% link_to "Eliminar", usuario, method: :delete, confirm: "Estas Seguro" %></td>
+      <td><%= link_to usuario.email, usuario %></td>
+      <td><%= link_to "Editar", edit_usuario_path(usuario) %></td>
+      <td><%= link_to "Eliminar", usuario, method: :delete, confirm: "Estas Seguro" %></td>
     </tr>
   <% end %>
   <% if @usuarios.size==0 %>
     <tr>
     <td>Usuarios No Encontrados</td>
-    <td>Usuarios No Encontrados</td>
+    <td></td>
   </tr>
   <% end %>
 </table>
