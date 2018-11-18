@@ -52,6 +52,8 @@ end
 group :production do
   # base de datos a usar en heroku es postgres
   gem 'pg'
+  # para usar archivos fijos estaticos y css
+  gem 'rails_12factor'
 end
 
 group :doc do
