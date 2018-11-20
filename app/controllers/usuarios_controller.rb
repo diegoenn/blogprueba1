@@ -9,7 +9,7 @@ class UsuariosController < ApplicationController
     end
 
   def detalle
-      @usuarios=Usuario.find(1)
+      @usuarios=Usuario.find(params[:id])
     end
 
   def destroy
