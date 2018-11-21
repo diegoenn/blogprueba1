@@ -1,5 +1,27 @@
 <h1>
-segunda pagina de Diego Narvaez
+segunda pagina de Diego Narvaez - Detalle de Usuario
 </h1>
-<h3><%= @usuarios.nombre %></h3>
-<h3><%= @usuarios.email %></h3>
+<table>
+  <tr>
+    <td>Id:</td>
+    <td><%= @usuarios.id %></td>
+  </tr>
+   <tr>
+    <td>Nombre:</td>
+    <td><%= @usuarios.nombre %></td>
+  </tr>
+   <tr>
+    <td>Email:</td>
+    <td><%= @usuarios.email %></td>
+  </tr>
+   <tr>
+    <td>Fecha Creación</td>
+    <td><%= @usuarios.created_at %></td>
+  </tr>
+   <tr>
+    <td>Ultima Actualización</td>
+    <td><%= @usuarios.updated_at %></td>
+  </tr>
+</table>
+<br>
+<h3><%= link_to 'Atras', usuarios_path %></h3>
